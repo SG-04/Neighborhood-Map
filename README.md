@@ -1,4 +1,4 @@
-# Neighborhood Map React Project
+# Neighborhood Map(React) Project
 This project is developed using Google Map API and React. The initial location data (to load onto the map)
 is being fetched from [Foursquare third party API](#thirt-party-apis). You can filter the location from
 the text filter section and the map markers & place listings will be updated on real-time based on the
