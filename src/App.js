@@ -13,7 +13,7 @@ class App extends Component {
   }
 
   loadMap = () => {
-    loadScript("https://maps.googleapis.com/maps/api/js?key=AIzaSyD6VCMBe5VKBrf0lING4q0wpmrwc3UYuwU&callback=initMap")
+    loadScript("https://maps.googleapis.com/maps/api/js?key=AIzaSyD9x0NjNq08cqACzrapAeq8NCjRhFRrcD4&callback=initMap")
     window.initMap=this.initMap
   }
 
