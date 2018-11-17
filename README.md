@@ -21,15 +21,15 @@ listing or by clicking on the individual map markers.
 You need to set up the application before you can see it running live in your browser.
 Please check the [installation](#how-to-launch-the-app-locally) section to know more.
 ## Project URL
-https://SG-04.github.io/Neighborhood-Map/
+https://sg-04.github.io/Neighborhood-Map/
 
 ## Create React App
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app). You can find more information on how to perform common tasks [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
+This project was bootstrapped with [Create React App](https://github.com/SG-04/Neighborhood-Map.git). You can find more information on how to perform common tasks [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
 
 ### Installation
 
-1. Clone the Project - `https://github.com/gauravsinghaec/FEND-Neighborhood-Map-React.git`
-2. Go into the directory where the project now lives - `cd FEND-Neighborhood-Map-React`
+1. Clone the Project - `https://github.com/SG-04/Neighborhood-Map.git`
+2. Go into the directory where the project now lives - `cd Neighborhood-Map`
 3. Install the dependencies - `npm install`
 4. Start the app - `npm start`
 
