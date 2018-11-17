@@ -18,7 +18,7 @@ class App extends Component {
   }
 
   getVenues = () => {
-    const endPoint = "https://api.foursquare.com/v2/venues/explore"
+    const endPoint = "https://api.foursquare.com/v2/venues/explore?"
     const parameters = {
       client_id: "MFWBYGLPDEHOGIVGLHV5NJ15OKXXHGKDQU0VJEROPTKWGVSO",
       client_secret: "KUJCYLVMHE4XX0YINYCEJ0ITW4EQBEHYWLN3C5RDBR5QW43S",
