@@ -1,44 +1,65 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Neighborhood Map React Project
+This project is developed using Google Map API and React. The initial location data (to load onto the map)
+is being fetched from [Foursquare third party API](#thirt-party-apis). You can filter the location from
+the text filter section and the map markers & place listings will be updated on real-time based on the
+input text. Also you will be able to get the details about each place by selecting the place from the
+listing or by clicking on the individual map markers.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Getting Started](#getting-started)
+- [Project URL](#project-url)
+- [Create React App](#create-react-app)
+- [How to launch the app locally](#how-to-launch-the-app-locally)
+  - [Installation](#installation)
+- [Deploy to gh-pages](#deploy-to-gh-pages)
+- [Thirt Party APIs](#thirt-party-apis)
+- [Resources](#resources)
 
-### `npm start`
+## Getting Started
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+You need to set up the application before you can see it running live in your browser.
+Please check the [installation](#how-to-launch-the-app-locally) section to know more.
+## Project URL
+https://SG-04.github.io/Neighborhood-Map/
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+## Create React App
+This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app). You can find more information on how to perform common tasks [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
 
-### `npm test`
+### Installation
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clone the Project - `https://github.com/gauravsinghaec/FEND-Neighborhood-Map-React.git`
+2. Go into the directory where the project now lives - `cd FEND-Neighborhood-Map-React`
+3. Install the dependencies - `npm install`
+4. Start the app - `npm start`
 
-### `npm run build`
+## Thirt Party APIs
+* Foursquare API
+	We are loading the neighbouring locations for a given place (using its lattitude, longitude)
+	from this API. The places received are shown in the place listing and hence on the Map.
+```
+Foursquare fetch API url
+"https://api.foursquare.com/v2/venues/search?ll=26.14,78.10&client_id=<YOUR_CLIENT_ID>&client_secret=<YOUR_CLIENT_SECRET>&limit=25&v=20181117"
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* Wiki API
+We are fetching the wiki data from this API about each place and hence showing in the infowindow
+when marker is clicked on the map.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Wiki fetch API url
+"https://en.wikipedia.org/w/api.php?&origin=*&action=opensearch&search=Belgium&limit=5"
+```
+## Resources
+- [Google Maps JavaScript API V3 Reference](https://developers.google.com/maps/documentation/javascript/reference)
+- [Google Maps Markers](https://developers.google.com/maps/documentation/javascript/markers)
+- [Google Maps Infowindow](https://developers.google.com/maps/documentation/javascript/infowindows)
+- [All aria-* attribute](https://www.w3.org/TR/wai-aria-1.1/#state_prop_def)
+- [WebAIM Checklist for Accessibility](https://webaim.org/standards/wcag/checklist#sc1.4.6)
+- [Color Contrast Checker](https://webaim.org/resources/contrastchecker/)
+- [MediaWiki API help](https://en.wikipedia.org/w/api.php)
+- [Foursquare API endpoints](https://developer.foursquare.com/docs/api/endpoints)
+- [Google Map and React](https://stackoverflow.com/questions/34779489/rendering-a-google-map-without-react-google-map)
+- [React componentDidUpdate lifecycle event](https://reactjs.org/docs/react-component.html#unsafe_componentwillreceiveprops)
+- [Writing Scalable React Apps with the Component Folder Pattern](https://medium.com/styled-components/component-folder-pattern-ee42df37ec68)
+- [Throttle and Debounce used for input field](https://lodash.com/docs/4.17.10#debounce)
+- [react-throttle](https://github.com/gmcquistin/react-throttle)
+- [Refs in React](https://reactjs.org/docs/refs-and-the-dom.html)
