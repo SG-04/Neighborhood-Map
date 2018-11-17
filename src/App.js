@@ -1,11 +1,21 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import axios from 'axios';
 
 class App extends Component {
 
-  initMap = ()=>{
-    map = new google.maps.Map(document.getElementById('map'), {
+  componentDidMount(){
+    this.loadMap()
+  }
+
+  loadMap = () => {
+    loadScript("https://maps.googleapis.com/maps/api/js?key=AIzaSyBi9jzy6u1WBYJj9AIBKHu2MOPPg6oYpA0&callback=initMap")
+    window.initMap=this.initMap
+  }
+
+  
+  initMap = () => {
+    var map = new window.google.maps.Map(document.getElementById('map'), {
       center: {lat: -34.397, lng: 150.644},
       zoom: 8
     });
@@ -20,4 +30,12 @@ class App extends Component {
   }
 }
 
+function loadScript(url){
+  var index=window.document.getElementsByTagName("script")[0]
+  var script=window.document.createElement("script")
+  script.src=url
+  script.async=true
+  script.defer=true
+  index.parentNode.insertBefore(script,index)
+}
 export default App;
