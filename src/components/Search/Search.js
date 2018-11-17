@@ -36,14 +36,14 @@ class Search extends Component {
    */
   componentDidMount() {
     // We are making a call to foursquare API once the components are mounted
-    fetch('https://api.foursquare.com/v2/venues/search?ll=22.5726,88.3639&client_id=URF15OGCPJ1TLULVBABNIUQ0Z4DG0V0MG4M30CXCZHJCGTES&client_secret=14SK5TBI4RESQ4C4NWDQOYT03L3K0YE5025BMRPEYTEOHQJN&limit=25&v=20180707')
+    fetch(`https://api.foursquare.com/v2/venues/search?ll=26.14,78.10&client_id=MFWBYGLPDEHOGIVGLHV5NJ15OKXXHGKDQU0VJEROPTKWGVSO&client_secret=KUJCYLVMHE4XX0YINYCEJ0ITW4EQBEHYWLN3C5RDBR5QW43S&limit=25&v=20181117`)
       .then((response) => {
         if (response.status === 200) {
           // return the venue details from the API if request is successful
           return response.json();
         }
         // Throw data not found error if API endpoint respond with status other that 200
-        throw Error('No data found for co-ordinates: 22.5726,88.3639');
+        throw Error('No data found for co-ordinates: 26.14,78.10');
       })
       .then((data) => {
         if (data.response && data.response.venues) {
