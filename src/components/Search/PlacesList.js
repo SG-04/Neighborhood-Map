@@ -131,11 +131,11 @@ class PlacesList extends Component {
     return (
       <ul ref={this.refList} id="places-list" role="listbox" className="listbox">
         {locations.map((location, index) => (
-          <li
+          <li aria-labelledby="places name"
             key={location.id}
             id={`mi-${index}`}
             className="places-list-item"
-            role="option"
+            role="option" aria-selected="false"
             onClick={(event) => { this.handleClick(event); selectPlace(event.target.innerText); }}
             onKeyDown={(event) => { this.handleKeyDown(event); }}
           >
