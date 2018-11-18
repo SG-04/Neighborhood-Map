@@ -53,7 +53,7 @@ class Search extends Component {
           this.setState({ locations });
         } else {
         // Throw error if the response does not contain venues property
-          throw Error('No venues detail found for co-ordinates: 22.5726,88.3639');
+          throw Error('No venues detail found for co-ordinates: 26.14,78.10');
         }
       })
       // Catch any error in the Fetch API or javascript error
