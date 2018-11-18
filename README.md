@@ -8,11 +8,10 @@ listing or by clicking on the individual map markers.
 ## Table of Contents
 
 - [Getting Started](#getting-started)
-- [Project URL](#project-url)
 - [Create React App](#create-react-app)
 - [How to launch the app locally](#how-to-launch-the-app-locally)
   - [Installation](#installation)
-- [Deploy to gh-pages](#deploy-to-gh-pages)
+- [Offline Use and Service Worker](#offline-use-and-service-worker)
 - [Thirt Party APIs](#thirt-party-apis)
 - [Resources](#resources)
 
@@ -32,6 +31,22 @@ This project was bootstrapped with [Create React App](https://github.com/SG-04/N
 4. Start the app - `npm start`
 ```
 The application will be running at http://localhost:3000 URL
+```
+
+## Offline Use and Service Worker
+By default, the create-react-app includes a service worker in the production build.
+Do check the below steps to see service worker in action after production build
+
+1. Build the app to generate production version and test.
+```
+npm run build
+```
+
+2. Static Server - Set up your favorite HTTP server so that a visitor to your site is served index.html.
+   For environments using Node, the easiest way to handle this would be to install `serve` and let it handle the rest:
+```
+>>>npm install –g serve
+>>>serve –s build
 ```
 
 ## Thirt Party APIs
