@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import DebounceInput from 'react-debounce-input';
 
 class Filter extends Component {
   // Add PropTypes validation
@@ -21,12 +22,13 @@ class Filter extends Component {
     const { updateQuery } = this.props;
     return (
       <label htmlFor="filter-text">
-        <input
+        <DebounceInput
           id="filter-text"
           type="text"
           role="search"
           placeholder="Search places by name"
           value={inputValue}
+          debounceTimeout={1000}
           onChange={(event) => {
             this.updateInput(event.target.value);
             updateQuery(event.target.value);
