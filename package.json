@@ -6,7 +6,7 @@
     "axios": "^0.18.0",
     "escape-string-regexp": "^1.0.5",
     "gh-pages": "^2.0.1",
-    "homepage": "https://sg-04.github.io/Neighborhood-Map",
+    "homepage": "http://sg-04.github.io/Neighborhood-Map",
     "react": "^16.6.3",
     "react-burger-menu": "^2.5.4",
     "react-debounce-input": "^3.2.0",
